@@ -33,3 +33,26 @@ test('if correct add bet amount to money', assert => {
     //assert
     assert.equal(expected, actual);
 });
+test('if wrong subtract bet amount from money', assert => {
+    //arrange 
+    const correctGuess = false;
+    const betAmount = 500;
+    const balance = 1000;
+    const expected = 500;
+    //act
+    const actual = setBalance(correctGuess, betAmount, balance);
+    //assert
+    assert.equal(expected, actual);
+});
+
+test('if bet amount greater than balance alert', assert => {
+    //arrange 
+    const correctGuess = false;
+    const betAmount = 500;
+    const balance = 1000;
+    const expected = 500;
+    //act
+    const actual = setBalance(correctGuess, betAmount, balance);
+    //assert
+    assert.equal(expected, actual);
+});

@@ -15,14 +15,13 @@ let losses = 0;
 let money = 1000;
 
 flipButton.addEventListener('click', () => {
+    if(parseInt(bet.value) > money) {
+        alert('You can not bet more than you have');
+        return;
+    }
+
     const randomNumber = Math.random();
     const result = flipCoin(randomNumber);
-    
-    // Stored file path to image in variable based off result
-    const imgSrc = './assets/' + result + '.png';
-    // Assign filepath to image
-    coinImage.src = imgSrc;
-    
     let guess = '';
     // Stores the users guess as a variable
     if(headsRadio.checked) {
@@ -30,9 +29,18 @@ flipButton.addEventListener('click', () => {
     } else {
         guess = 'tails';
     }
-    // Increments wins and losses
     const correctGuess = guess === result;
+    
+    // Stored file path to image in variable based off result
+    const imgSrc = './assets/' + result + '.png';
 
+    money = setBalance(correctGuess, parseInt(bet.value), money);
+    balance.textContent = 'Money: $' + money;
+
+    // Assign filepath to image
+    coinImage.src = imgSrc;
+    
+    // Increments wins and losses and update DOM
     if(correctGuess) {
         wins++;
         winCount.textContent = 'Wins: ' + wins;
