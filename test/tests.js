@@ -1,11 +1,5 @@
+import flipCoin from '../src/flipCoin.js';
 const test = QUnit.test;
-function flipCoin(number) {
-    if(number < 0.5) {
-        return 'heads';
-    }
-    return 'tails';
-}
-
 
 test('return heads if number is less than .5', assert => {
 
