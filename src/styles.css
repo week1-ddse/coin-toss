@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Exo|Ubuntu');
+
+body {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+    width: 200px;
+}
+
+h1 {
+    font-family: 'Exo', sans-serif;
+}
+
+button {
+    font-size: 1.2em;
+}
+
+span {
+    margin: 0 10px;
+}
