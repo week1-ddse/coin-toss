@@ -10,27 +10,27 @@
 <body>
    <h1>Coin Toss</h1>
    <p>
-       <span>Wins: 0</span>
-       <span>Losses: 0</span>
+       <span id="win-count">Wins: 0</span>
+       <span id="loss-count">Losses: 0</span>
    </p> 
    <p>
-       <img src="./assets/heads.png" alt="coin">
+       <img id="coin-image" src="./assets/heads.png" alt="coin">
    </p>
-   <p>
+   <p id="result-message">
        Flip the coin and place your bet!
    </p>
    <p>
         <label>
-            <input type="radio" name="flipChoice" checked>Heads</input>
+            <input id="heads-radio" type="radio" name="flipChoice" checked>Heads</input>
         </label>
     </p>
     <p>
         <label>
-            <input type="radio" name="flipChoice">Tails</input>
+            <input id="tails-radio" type="radio" name="flipChoice">Tails</input>
         </label>
     </p>
     <p>
-        <button>Flip it!</button>
+        <button id="flip-button">Flip it!</button>
     </p>    
 </body>
 </html>
