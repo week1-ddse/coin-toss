@@ -1,5 +1,10 @@
 function setBalance(correctGuess, betAmount, balance) {
-    return 1500;
+    if(correctGuess) {
+        balance += betAmount;
+    } else {
+        balance -= betAmount;
+    }
+    return balance;
 }
 
 export default setBalance;
