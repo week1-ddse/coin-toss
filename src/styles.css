@@ -20,3 +20,8 @@ button {
 span {
     margin: 0 10px;
 }
+
+#bet {
+    border: 1px solid black;
+    width: 60px;
+}
