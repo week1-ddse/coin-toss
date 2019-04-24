@@ -20,22 +20,23 @@ flipButton.addEventListener('click', () => {
     coinImage.src = imgSrc;
     
     let guess = '';
-    //stores the users guess as a variable
+    // Stores the users guess as a variable
     if(headsRadio.checked) {
         guess = 'heads';
     } else {
         guess = 'tails';
     }
-    // increments wins and losses
+    // Increments wins and losses
     const correctGuess = guess === result;
 
     if(correctGuess) {
         wins++;
         winCount.textContent = 'Wins: ' + wins;
+        resultMessage.textContent = 'Go to Vegas you lucky dog!!!';
     } else {
         losses++;
         lossCount.textContent = 'Losses: ' + losses;
+        resultMessage.textContent = 'Did a black cat cross your path?';
     }
-    console.log(wins, losses);
 });
 
