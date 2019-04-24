@@ -11,16 +11,31 @@ let wins = 0;
 let losses = 0;
 
 flipButton.addEventListener('click', () => {
-
     const randomNumber = Math.random();
     const result = flipCoin(randomNumber);
-
+    
+    // Stored file path to image in variable based off result
+    const imgSrc = './assets/' + result + '.png';
+    // Assign filepath to image
+    coinImage.src = imgSrc;
+    
     let guess = '';
+    //stores the users guess as a variable
     if(headsRadio.checked) {
         guess = 'heads';
     } else {
         guess = 'tails';
     }
-    console.log(guess);
+    // increments wins and losses
+    const correctGuess = guess === result;
+
+    if(correctGuess) {
+        wins++;
+        winCount.textContent = 'Wins: ' + wins;
+    } else {
+        losses++;
+        lossCount.textContent = 'Losses: ' + losses;
+    }
+    console.log(wins, losses);
 });
 
