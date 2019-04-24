@@ -1,3 +1,5 @@
+import flipCoin from '../src/flipCoin.js';
+
 const winCount = document.getElementById('win-count');
 const lossCount = document.getElementById('loss-count');
 const coinImage = document.getElementById('coin-image');
@@ -9,6 +11,6 @@ const flipButton = document.getElementById('flip-button');
 flipButton.addEventListener('click', () => {
 
     const randomNumber = Math.random();
-
+    console.log(flipCoin(randomNumber));
 });
 
