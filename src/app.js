@@ -5,12 +5,22 @@ const lossCount = document.getElementById('loss-count');
 const coinImage = document.getElementById('coin-image');
 const resultMessage = document.getElementById('result-message');
 const headsRadio = document.getElementById('heads-radio');
-const tailsRadio = document.getElementById('tails-radio');
 const flipButton = document.getElementById('flip-button');
+
+let wins = 0;
+let losses = 0;
 
 flipButton.addEventListener('click', () => {
 
     const randomNumber = Math.random();
-    console.log(flipCoin(randomNumber));
+    const result = flipCoin(randomNumber);
+
+    let guess = '';
+    if(headsRadio.checked) {
+        guess = 'heads';
+    } else {
+        guess = 'tails';
+    }
+    console.log(guess);
 });
 
