@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coin Toss</title>
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+   <h1>Coin Toss</h1>
+   <p>
+       <span id="win-count">Wins: 0</span>
+       <span id="loss-count">Losses: 0</span>
+   </p> 
+   <p>
+       <span id="current-balance">Money: $1000</span>
+   </p>
+   <p>
+       <img id="coin-image" src="./assets/heads.png" alt="coin">
+   </p>
+   <p id="result-message">
+       Flip the coin and place your bet!
+   </p>
+   <p>
+        <label>
+            <input id="heads-radio" type="radio" name="flipChoice" checked>Heads</input>
+        </label>
+    </p>
+    <p>
+        <label>
+            <input id="tails-radio" type="radio" name="flipChoice">Tails</input>
+        </label>
+    </p>
+    <p>
+        <label for="bet">Place your bet:</label>
+        <input id="bet"></input>
+    </p>
+    <p>
+        <button id="flip-button">Flip it!</button>
+    </p>
+    <script type="module" src="./src/app.js"></script>      
+</body>
+</html>
